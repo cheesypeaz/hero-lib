@@ -174,8 +174,8 @@ local function CreateSlider(Parent, Setting, Values, Text, Tooltip, Action, Opti
   Slider:SetObeyStepOnDrag(true)
 
   local Name = Slider:GetName()
-  _G[Name .. "Low"]:SetText(Slider.minValue)
-  _G[Name .. "High"]:SetText(Slider.maxValue)
+  _G[Name .. "Low"]:SetText(stringformat("%.2f",Slider.minValue))
+  _G[Name .. "High"]:SetText(stringformat("%.2f",Slider.maxValue))
 
   AnchorTooltip(Slider, FilterTooltip(Tooltip, Optionals))
 
